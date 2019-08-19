@@ -1,18 +1,50 @@
 .wrapper {
-  width: 450px;
+  // width: 450px;
   //   height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .container {
     background: #e2e2e2;
     display: grid;
     height: 100%;
     width: 100%;
-    grid-template-columns: 70% 30%;
-    grid-auto-rows: minmax(300px, 308px);
+    grid-template-columns: minmax(min-content, 100%) minmax(25%, min-content);
+    grid-auto-rows: minmax(min-content, 100%) minmax(min-content, 100%);
     grid-gap: 8px;
     padding: 8px;
+
+    & .main-image {
+      height: 100%;
+    }
     & .image-thumbnails-container {
       display: grid;
-      grid-auto-rows: minmax(150px, 100px);
+      grid-auto-columns: minmax(min-content, 100%);
+      grid-gap: 8px;
+      padding-right: 8px;
+      & .image-thumbnails {
+        &.image.image-thumb {
+          height: 100%;
+        }
+      }
+    }
+  }
+  .portrait {
+    background: #e2e2e2;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: minmax(min-content, 100%) minmax(30%, min-content);
+    grid-auto-rows: minmax(65%, 65%) minmax(min-content, 100%);
+    grid-gap: 8px;
+    padding: 8px;
+
+    & .main-image {
+      height: 100%;
+    }
+    & .image-thumbnails-container {
+      display: grid;
+      grid-auto-columns: minmax(min-content, 100%);
       grid-gap: 8px;
       padding-right: 8px;
       & .image-thumbnails {
